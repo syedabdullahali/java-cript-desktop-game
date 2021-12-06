@@ -1,0 +1,248 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+.gameContainer{
+ 
+    animation: king 100s ease-in-out infinite;
+    color: #fdfcfc;
+    font-size: 35px;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+  
+}
+
+
+.rain{
+    height: 100%;
+    background-image:url(https://pngimg.com/uploads/rain/rain_PNG13470.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: rain 0.1s linear infinite;
+}
+.rain{
+    visibility:visible;
+}
+
+@keyframes rain {
+    from {background-position: 0% 0%;}
+    to{background-position: 100% -100%;}
+}
+
+.lion{
+   background-image: url(https://www.freepnglogos.com/uploads/lion-logo-png/gold-lion-logo-6.png );
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 233px;
+    height: 114px;
+   position: absolute;
+   bottom:0;
+   left: 52px;
+   margin: 25px;
+   padding-bottom: 10px;
+}
+.obstacle{
+    background-image:url(https://www.freepnglogos.com/uploads/dragon-png/dungeons-dragons-clipart-red-dragon-pencil-and-20.png);
+    width: 366px;
+    height: 213px;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 75%;
+    padding-bottom: 10px;
+}
+.gameOver{
+    position: relative;
+    top :163px;
+    font-size: 53px;
+    text-align: center;
+    visibility: hidden;
+    font-family: sans-serif;
+
+}
+#scoreCont{
+ position: absolute;
+ right: 22px;
+ top: 40px;
+ border: 2px solid white;
+ padding: 2px;
+ padding-right: 110px;
+ width: 250px;
+}
+
+.rain{
+    visibility: hidden;
+}
+
+
+
+
+@keyframes king{
+    0%,100%{
+        background-image: url(https://cdnb.artstation.com/p/assets/covers/images/027/347/855/medium/sasha-mio-sasha-mio-2.jpg?1591276342);
+
+    }
+    25%{
+        background-image: url(https://www.customwallpaper.net.au/wp-content/uploads/2016/05/Adventure-Landscape-with-big-stones-and-mountains.jpeg);
+
+    }
+    50%{       
+        background-image: url(https://media.istockphoto.com/vectors/paint-illustrations-in-the-wild-and-natural-vector-id1018932058?k=20&m=1018932058&s=170667a&w=0&h=4r45d8Q1rIDFPx6Y2vnDLGkaey91PxpdDoeogoQByOo=);
+        
+    }
+    75%{
+        background-image: url(https://i.pinimg.com/originals/b7/eb/db/b7ebdbb8f7b7fbf61c134b0921a1aec8.jpg);
+
+    }
+}
+
+.outer{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(red, green, blue, alpha) ;
+}
+
+.animateDino{
+    animation: dino 0.6s ease-in-out;
+}
+    
+    @keyframes dino { 
+    0%{
+        bottom: 0;
+    }
+    50%{
+         bottom: 599px;
+    }
+    100%{
+        bottom: 0;
+    }
+    
+    }
+
+    
+
+    .obstacleAni{
+        animation: obstacleAni 5s linear infinite;
+    }
+    @keyframes obstacleAni {
+        0%{
+            left: 100%;
+        }
+        100%{left:-10vw}
+    } 
+
+
+
+
+#button1,#button2{
+   color: white;
+   background-color: blue;
+   height: 40px;
+   width: 70px;
+   display: inline;
+   border: 1px solid white;
+
+}
+#l{
+ position: relative;
+ top: -32px;
+}
+
+
+#button1,#button2:hover{
+    background-color: rgb(76, 37, 253);
+}
+
+@media only screen and (max-width: 882px) {
+    .lion{
+      
+        width: 163px;
+         height: 14px;
+     padding-bottom: 80px; 
+     margin-bottom: -5px;       
+     
+     }
+     .obstacle{
+         width: 266px;
+         height: 113px;
+         left: 0px;
+        
+     }
+  }
+
+  @media only screen and (max-width: 580px) {
+    .lion{
+      
+        width: 153px;
+         height: 1px;
+     padding-bottom: 80px; 
+     margin-bottom: -5px;       
+     
+     }
+     .obstacle{
+         width: 170px;
+         height: 83px;
+         left: 0px;
+         
+        
+     }
+
+     .gameOver{
+        position: relative;
+        top :163px;
+        font-size: 33px;
+        text-align: center;
+        visibility: hidden;
+        font-family: sans-serif;
+     }
+     #l{
+       top:20px;
+     }
+  }
+
+  @media only screen and (max-width: 390px) {
+    .lion{
+      
+        width: 153px;
+         height: -91px;
+     padding-bottom: 80px; 
+     margin-bottom: -5px;       
+     
+     }
+     .obstacle{
+         width: 170px;
+         height: 83px;
+         left: 0px;
+         
+        
+     }
+
+     .gameOver{
+        position: relative;
+        top :163px;
+        font-size: 33px;
+        text-align: center;
+        visibility: hidden;
+        font-family: sans-serif;
+     }
+     #l{
+       top:20px;
+     }
+     #scoreCont{
+         font-size: 23px;
+         padding: 0;
+     }
+  }
